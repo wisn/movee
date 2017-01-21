@@ -15,7 +15,7 @@ import System.Environment (getArgs)
 import Text.Read (readMaybe)
 import qualified Data.ByteString.Lazy as BL (ByteString)
 
--- [DATA]
+-- [JSON]
 data Movie = Movie {
   title      :: String
 , year       :: String
@@ -69,16 +69,14 @@ isItWorthMsg year rating =
           then if rating < 7.0
             then (beRed "This movie seems didn't worth for us...")
             else (beRed "Well, the graphic is old but seems fine for us...")
-        else if rating < 7.0
-          then (beRed "Well, this movie quite modern but has bad rating...")
-          else (beGreen "This movie is awesome! Looks like worth for us!")
+          else if rating < 7.0
+            then (beRed "Well, this movie quite modern but has bad rating...")
+            else (beGreen "This movie is awesome! Looks like worth for us!")
   in message
 
 -- [MESSAGES]
 help :: [String]
 help = [ "Usage: movee NAME [YEAR]" ]
-
-
 
 -- [MAIN]
 main :: IO ()
