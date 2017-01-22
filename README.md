@@ -56,3 +56,16 @@ A fun weekend turns into madness and horror for a bunch of groupies looking for 
 
 Well, this movie quite modern but has bad rating...
 ```
+
+## Installation
+```command
+git clone https://github.com/wisn/movee.git
+cd movee
+ghc movee
+sudo mv movee /usr/bin
+```
+
+Test it out.
+```command
+movee
+```
